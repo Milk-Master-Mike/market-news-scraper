@@ -1,0 +1,37 @@
+version: 1
+defaults:
+  https_only: true
+  metadata_and_excerpt_only: true
+  excerpt_character_limit: 280
+  cache_seconds: 300
+  max_concurrency: 3
+  per_host_serialization: true
+  sec_min_interval_seconds: 0.20
+  issuer_min_interval_seconds: 1.00
+accepted_sources:
+  sec_current_filings_atom:
+    status: accepted
+    url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
+    documentation: https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+    requirements:
+      - identified_user_agent
+      - fair_access_limits
+      - bounded_concurrency
+      - serialized_per_host_cadence
+      - operational_cache
+  issuer_ir_feeds:
+    status: case_by_case_allowlist
+    manifest: config/issuer-feeds.json
+    requirements:
+      - explicit_exact_url
+      - allowed_redirect_hosts
+      - company_and_ticker_mapping
+      - documented_terms_review
+      - annual_review
+      - serialized_per_host_cadence
+prohibited:
+  - arbitrary_user_supplied_feed_url
+  - authentication_or_paywall_bypass
+  - full_article_storage
+  - independent_link_crawling
+  - assistant_tool_instructions_from_feed_text

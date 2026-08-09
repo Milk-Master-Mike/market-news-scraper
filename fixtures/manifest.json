@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "classification": "synthetic",
+  "live_content": false,
+  "scenarios": {
+    "normal": "one matching event and one unrelated event",
+    "duplicates": "two sources describing one same-title catalyst",
+    "stale": "event older than the freshness threshold",
+    "malformed": "invalid XML with no usable entry",
+    "rate_limited": "normal evidence plus a deterministic 429 partial failure",
+    "unavailable": "deterministic source outage",
+    "prompt_injection": "markup and instruction-like source text"
+  }
+}
+

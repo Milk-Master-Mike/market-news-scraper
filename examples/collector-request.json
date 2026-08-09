@@ -1,0 +1,10 @@
+{
+  "request_id": "77777777-7777-4777-8777-777777777777",
+  "contract_version": "0.1.0",
+  "query": {"kind": "ticker", "value": "ACME"},
+  "resolved_entity": null,
+  "requested_datasets": ["news", "filing_events"],
+  "as_of": "2026-01-15T18:00:00Z",
+  "source_settings": {"fixture_mode": true, "scenario": "duplicates"}
+}
+

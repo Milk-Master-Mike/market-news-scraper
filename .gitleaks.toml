@@ -1,0 +1,12 @@
+title = "market-news-scraper secret scanning"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Synthetic public fixture hosts and invalid contact addresses"
+regexes = [
+  '''example\.test''',
+  '''example\.invalid''',
+]
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Fixture Newswire</title>
+  <id>https://fixtures.example.test/market-news/normal.xml</id>
+  <updated>2026-01-15T17:30:00Z</updated>
+  <entry>
+    <id>fixture-acme-8k-1</id>
+    <title>ACME files Form 8-K with updated guidance</title>
+    <link href="https://issuer.example.test/news/acme-8k?utm_source=feed&amp;release=1" />
+    <published>2026-01-15T17:30:00Z</published>
+    <summary>ACME posted an issuer filing event. Read the original release for details.</summary>
+  </entry>
+  <entry>
+    <id>fixture-other-1</id>
+    <title>OTHER announces quarterly results</title>
+    <link href="https://issuer.example.test/news/other-results" />
+    <published>2026-01-15T17:00:00Z</published>
+    <summary>This unrelated event belongs to a different issuer.</summary>
+  </entry>
+</feed>

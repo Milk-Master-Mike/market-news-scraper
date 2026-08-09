@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fixture Newswire</title>
+    <link>https://fixtures.example.test/</link>
+    <description>Synthetic duplicate fixture</description>
+    <item>
+      <guid>duplicate-a</guid>
+      <title>ACME announces quarterly results</title>
+      <link>https://issuer.example.test/releases/acme-results?utm_campaign=rss</link>
+      <pubDate>Thu, 15 Jan 2026 16:00:00 GMT</pubDate>
+      <description>ACME reported quarterly results and updated its outlook.</description>
+    </item>
+    <item>
+      <guid>duplicate-b</guid>
+      <title>ACME announces quarterly results</title>
+      <link>https://wire.example.test/story/acme-results?source=issuer</link>
+      <pubDate>Thu, 15 Jan 2026 16:00:00 GMT</pubDate>
+      <description>ACME reported quarterly results and updated its outlook.</description>
+    </item>
+  </channel>
+</rss>
+

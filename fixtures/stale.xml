@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fixture Newswire</title>
+    <link>https://fixtures.example.test/</link>
+    <description>Synthetic stale fixture</description>
+    <item>
+      <guid>stale-acme-1</guid>
+      <title>ACME announces product launch</title>
+      <link>https://issuer.example.test/releases/old-product</link>
+      <pubDate>Mon, 01 Sep 2025 12:00:00 GMT</pubDate>
+      <description>ACME launched a product in this intentionally stale event.</description>
+    </item>
+  </channel>
+</rss>
+

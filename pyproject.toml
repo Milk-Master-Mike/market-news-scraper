@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "market-news-scraper"
+version = "0.1.0"
+description = "Allowlist-first SEC and issuer-feed catalyst collector"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [{ name = "Michael Weems" }]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "market-data-contracts==0.1.0",
+  "pydantic>=2.7,<3",
+  "uvicorn>=0.30,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2", "pytest-asyncio>=0.23", "ruff>=0.5"]
+
+[project.scripts]
+market-news = "market_news_scraper.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/market_news_scraper"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"config/issuer-feeds.json" = "market_news_scraper/data/issuer-feeds.json"
+"fixtures" = "market_news_scraper/fixtures"
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers --strict-config -q"
+testpaths = ["tests"]
+pythonpath = ["src", "../market-data-contracts/src"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
