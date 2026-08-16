@@ -1,5 +1,7 @@
 # Market News Scraper
 
+> **Archived:** This service now lives in [`market-research-platform`](https://github.com/Milk-Master-Mike/market-research-platform/tree/main/services/market-news). Its full Git history was preserved in the monorepo.
+
 An independently runnable FastAPI service and CLI that collects company events
 from SEC Atom/RSS sources and individually reviewed issuer investor-relations
 feeds. It canonicalizes links, clusters duplicate stories, associates records
